@@ -25,5 +25,21 @@ Vagrant.configure("2") do |config|
     vb.memory = "1536"
   end
   config.vm.provision "bootstrap_choco", type: "shell", path: "https://chocolatey.org/install.ps1"
-  config.vm.provision "install_tools", type: "shell", path: "install_tools.ps1"
+  config.vm.provision "install_tools", type: "shell", inline: <<-SHELL
+    $env:Path += ";$ProgramData\\Chocolatey"
+
+    choco feature enable -n allowGlobalConfirmation
+
+    choco install notepadplusplus.install
+    choco install 7zip.install
+    choco install putty.install
+    choco install git.install
+    choco install firefox
+    choco install javaruntime
+    choco install citrix-receiver
+    choco install flashplayerplugin
+
+    choco feature disable -n allowGlobalConfirmation
+  SHELL
+
 end
