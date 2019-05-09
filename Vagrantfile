@@ -38,6 +38,7 @@ Vagrant.configure("2") do |config|
     choco install javaruntime
     choco install citrix-receiver
     choco install flashplayerplugin
+    choco install googlechrome
 
     choco feature disable -n allowGlobalConfirmation
   SHELL
