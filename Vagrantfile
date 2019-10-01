@@ -33,12 +33,15 @@ Vagrant.configure("2") do |config|
     choco install notepadplusplus.install
     choco install 7zip.install
     choco install putty.install
-    choco install git.install
     choco install firefox
     choco install javaruntime
-    choco install citrix-receiver
     choco install flashplayerplugin
+
+    ## Optional stuff
     choco install googlechrome
+    choco install citrix-receiver
+    choco install git.install
+    #choco install onedrive
 
     choco feature disable -n allowGlobalConfirmation
   SHELL
