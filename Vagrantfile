@@ -44,7 +44,7 @@ Vagrant.configure("2") do |config|
     choco install googlechrome
     choco install citrix-receiver
     choco install git.install
-    #choco install googledrive
+    #choco install google-drive-file-stream
 
     choco feature disable -n allowGlobalConfirmation
   SHELL
