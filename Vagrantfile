@@ -46,6 +46,7 @@ Vagrant.configure("2") do |config|
     choco install citrix-receiver
     choco install git.install
     #choco install google-drive-file-stream
+    choco install webex-meetings
 
     choco feature disable -n allowGlobalConfirmation
   SHELL
