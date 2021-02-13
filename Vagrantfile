@@ -33,12 +33,13 @@ Vagrant.configure("2") do |config|
 
     choco feature enable -n allowGlobalConfirmation
 
-    choco install notepadplusplus.install
+    choco install sublimetext3
     choco install 7zip.install
     choco install putty.install
     choco install firefox
     choco install javaruntime
-    choco install flashplayerplugin
+    choco install wsl
+    choco install wsl-ubuntu-2004
 
     ## Optional stuff
     choco install googlechrome
