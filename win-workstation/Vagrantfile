@@ -31,22 +31,40 @@ Vagrant.configure("2") do |config|
   config.vm.provision "install_tools", type: "shell", inline: <<-SHELL
     $env:Path += ";$ProgramData\\Chocolatey"
 
-    choco feature enable -n allowGlobalConfirmation
+ choco feature enable -n allowGlobalConfirmation
 
-    choco install sublimetext3
+
     choco install 7zip.install
-    choco install putty.install
+    choco install citrix-receiver
     choco install firefox
+    choco install git.install
+    choco install google-drive-file-stream
+    choco install googlechrome
     choco install javaruntime
+    choco install putty.install
+    choco install slack
+    choco install sysinternals
+    choco install vcredist140
+    choco install vcredist2015
+    choco install vcxsrv
+    choco install vscode
+    choco install vim
+    choco install vnc-viewer
+    choco install webex
+    choco install lens
+    choco install adobereader
+    choco install keepassxc
+    choco install multipass
+    choco install openvpn-connect
+    choco install python
+    choco install microsoft-windows-terminal
+    choco install wireshark
+    choco install yubikey-manager
+    choco install zoom
+
+    ## Requires reboot
     choco install wsl
     choco install wsl-ubuntu-2004
-
-    ## Optional stuff
-    choco install googlechrome
-    choco install citrix-receiver
-    choco install git.install
-    #choco install google-drive-file-stream
-    choco install webex-meetings
 
     choco feature disable -n allowGlobalConfirmation
   SHELL
